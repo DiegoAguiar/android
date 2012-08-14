@@ -1,0 +1,72 @@
+package com.example.oimundo;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.tela1);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_main, menu);
+        return true;
+    }
+    
+    private void log(String mensagem){
+    	Log.i("Tela 1", mensagem);
+    }
+    
+    @Override
+    protected void onStart() {
+    	super.onStart();
+    	log("onstart");
+    }
+    
+    @Override
+    protected void onResume() {
+    	super.onResume();
+     	log("onstart");
+        
+    }
+    
+    @Override
+    protected void onPause() {
+    	super.onPause();
+     	log("onstart");
+        
+    }
+    
+    @Override
+    protected void onDestroy() {
+    	// TODO Auto-generated method stub
+    	super.onDestroy();
+     	log("onstart");
+    }
+    
+    
+    @Override
+    protected void onRestart() {
+    	// TODO Auto-generated method stub
+    	super.onRestart();
+     	log("onstart");
+        
+    }
+    
+    @Override
+    protected void onStop() {
+    	// TODO Auto-generated method stub
+    	super.onStop();
+     	log("onstart");
+        
+    }
+    
+
+    
+}

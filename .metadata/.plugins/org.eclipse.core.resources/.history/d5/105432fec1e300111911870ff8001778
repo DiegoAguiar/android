@@ -1,0 +1,56 @@
+package com.example.conceito;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class Tela1Activity extends Activity implements OnClickListener {
+	
+	private ProgressDialog progressDialog;
+	private Handler handler;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.tela1);
+        
+        
+        Button button = (Button) findViewById(R.id.btProcessar);
+        
+        button.setOnClickListener(this);
+        
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tela1, menu);
+        return true;
+    }
+
+
+	public void onClick(View arg0){
+		processar();
+		Toast.makeText(Tela1Activity.this, "click", 1000).show();
+	}
+	
+	
+	@SuppressLint("ParserError") public void processar(){
+		for (int contador = 0; contador < 150000; contador++) {
+			Log.i'("Tela1", "Estou no " + contador);
+		}
+	}
+	
+	
+	
+	
+
+    
+}

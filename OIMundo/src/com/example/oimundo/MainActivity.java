@@ -1,0 +1,63 @@
+package com.example.oimundo;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+
+@SuppressLint("ParserError") public class MainActivity extends Activity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.tela1);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_main, menu);
+        return true;
+    }
+    
+    private void log(String mensagem){
+    	Log.i("Tela 1", mensagem);
+    }
+    
+    @Override
+    protected void onStart() {
+    	super.onStart();
+    	log("onStart");
+    }
+  
+    
+    @Override
+    protected void onResume() {
+    	super.onResume();
+     	log("onResume");
+    }
+    
+    @Override
+    protected void onPause() {
+    	super.onPause();
+     	log("onPause");
+    }
+    
+    @Override
+    protected void onStop() {
+    	super.onStop();
+     	log("onStop");
+    }
+  
+    @Override
+    protected void onRestart() {
+    	super.onRestart();
+     	log("onRestart");
+    }
+    
+    @Override
+    protected void onDestroy() {
+    	super.onDestroy();
+     	log("onDestroy");
+    }
+}
